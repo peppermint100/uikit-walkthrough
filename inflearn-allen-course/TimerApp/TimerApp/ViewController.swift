@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var mainLabel: UILabel!
     @IBOutlet var slider: UISlider!
     
-    weak var timer = Timer()
+    weak var timer: Timer?
     var number = 1
     
     override func viewDidLoad() {
