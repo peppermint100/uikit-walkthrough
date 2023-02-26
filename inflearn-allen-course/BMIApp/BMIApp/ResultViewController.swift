@@ -11,6 +11,10 @@ class ResultViewController: UIViewController {
     
     private let textSize: CGFloat = 18
     
+    var bmi: Double?
+    var bgColor: UIColor?
+    var adviseMessage: String?
+    
     private lazy var resultLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: textSize)
@@ -23,10 +27,10 @@ class ResultViewController: UIViewController {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: textSize + 4)
         label.textAlignment = .center
-        label.backgroundColor = .systemPink
+        label.backgroundColor = bgColor!
         label.layer.cornerRadius = 5
         label.clipsToBounds = true
-        label.text = "26.12"
+        label.text = String(bmi!)
         return label
     }()
     
@@ -34,7 +38,7 @@ class ResultViewController: UIViewController {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: textSize)
         label.textAlignment = .center
-        label.text = "살을 빼세요"
+        label.text = adviseMessage
         return label
     }()
     
