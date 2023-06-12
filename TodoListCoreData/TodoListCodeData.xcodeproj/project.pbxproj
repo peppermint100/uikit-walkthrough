@@ -18,6 +18,7 @@
 		BA184B492A35A8E2006230BB /* TodoListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA184B472A35A8E2006230BB /* TodoListItem+CoreDataProperties.swift */; };
 		BA184B4B2A35E2EB006230BB /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA184B4A2A35E2EB006230BB /* TodoTableViewCell.swift */; };
 		BA184B4D2A3615A4006230BB /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA184B4C2A3615A4006230BB /* DateUtils.swift */; };
+		BA184B4F2A361A84006230BB /* UIImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA184B4E2A361A84006230BB /* UIImageUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		BA184B472A35A8E2006230BB /* TodoListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA184B4A2A35E2EB006230BB /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		BA184B4C2A3615A4006230BB /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		BA184B4E2A361A84006230BB /* UIImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				BA184B332A35A5BE006230BB /* TodoListCodeData.xcdatamodeld */,
 				BA184B4A2A35E2EB006230BB /* TodoTableViewCell.swift */,
 				BA184B4C2A3615A4006230BB /* DateUtils.swift */,
+				BA184B4E2A361A84006230BB /* UIImageUtil.swift */,
 			);
 			path = TodoListCodeData;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA184B4F2A361A84006230BB /* UIImageUtil.swift in Sources */,
 				BA184B4B2A35E2EB006230BB /* TodoTableViewCell.swift in Sources */,
 				BA184B4D2A3615A4006230BB /* DateUtils.swift in Sources */,
 				BA184B352A35A5BE006230BB /* TodoListCodeData.xcdatamodeld in Sources */,

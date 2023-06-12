@@ -26,12 +26,13 @@ class TodoTableViewCell: UITableViewCell {
     
     let createdAtLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .gray
+        label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
     
     let completeButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "checkmark"), for: .normal)
         return button
     }()
     
@@ -50,6 +51,14 @@ class TodoTableViewCell: UITableViewCell {
         contentView.addSubview(createdAtLabel)
         contentView.addSubview(completeButton)
         applyConstraints()
+        setUpCompleteButton()
+    }
+    
+    func setUpCompleteButton() {
+        let checkBoxConfig = UIImage.SymbolConfiguration(pointSize: 12, weight: .bold, scale: .large)
+        let checkBoxImage = UIImage(systemName: "checkmark", withConfiguration: checkBoxConfig)?
+            .withPadding(top: 20, leading: 20, bottom: 20, trailing: 20).withTintColor(.systemBlue)
+        completeButton.setImage(checkBoxImage, for: .normal)
     }
     
     func applyConstraints() {
@@ -70,8 +79,8 @@ class TodoTableViewCell: UITableViewCell {
             textLabelView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         ]
         let titleLabelConstraints = [
-            titleLabel.topAnchor.constraint(equalTo: textLabelView.topAnchor),
-            titleLabel.bottomAnchor.constraint(equalTo: createdAtLabel.topAnchor),
+            titleLabel.topAnchor.constraint(equalTo: textLabelView.topAnchor, constant: 5),
+            titleLabel.bottomAnchor.constraint(equalTo: createdAtLabel.topAnchor, constant: 5),
             titleLabel.leadingAnchor.constraint(equalTo: textLabelView.leadingAnchor)
         ]
         let createdLanelConstraints = [
