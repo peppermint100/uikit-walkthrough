@@ -7,13 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TodoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     let tableView: UITableView = {
         let table = UITableView()
-        table.register(TodoTableViewCell.self, forCellReuseIdentifier: TodoTableViewCell.identifier)
         return table
     }()
     
@@ -31,24 +30,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = view.bounds
+        tableView.register(TodoTableViewCell.self, forCellReuseIdentifier: TodoTableViewCell.identifier)
     }
     
     private func setUpNavigationBar() {
-        title = "CoreData TodoList"
-        
         let appearance = UINavigationBarAppearance()
         
-        appearance.backgroundColor = .white
-        navigationController?.navigationBar.tintColor = .systemBlue
-        navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
     }
     
+    func onTapToggleButton() {
+        print("toggle button tapped")
+    }
+    
     @objc
-    private func didTapAdd() {
+    func didTapAdd() {
         let alert = UIAlertController(title: "New item", message: "Enter new item", preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
         alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { [weak self] _ in

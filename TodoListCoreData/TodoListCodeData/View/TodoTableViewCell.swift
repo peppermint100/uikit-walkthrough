@@ -13,7 +13,7 @@ class TodoTableViewCell: UITableViewCell {
     
     var todo: TodoListItem? {
         didSet {
-            guard var todo = todo else { return }
+            guard let todo = todo else { return }
             titleLabel.text = todo.name
             createdAtLabel.text = todo.createdAt?.toString()
         }

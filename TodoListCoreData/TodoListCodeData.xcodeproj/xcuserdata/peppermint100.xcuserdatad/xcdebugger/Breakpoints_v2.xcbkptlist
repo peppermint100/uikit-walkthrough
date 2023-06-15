@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "67024CE6-D30A-45F8-AFD0-806B02A9DD71"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "17C99314-6818-4524-8EDF-235FE6BACC1B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TodoListCodeData/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "17C99314-6818-4524-8EDF-235FE6BACC1B - 83a47b8ce2e55bc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TodoListCodeData.ViewController.context.getter : __C.NSManagedObjectContext"
+                  moduleName = "TodoListCodeData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/peppermint100/workspace/uikit-walkthrough/TodoListCoreData/TodoListCodeData/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "17C99314-6818-4524-8EDF-235FE6BACC1B - 53f11ceed597dee1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TodoListCodeData.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; TodoListCodeData.ViewController"
+                  moduleName = "TodoListCodeData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/peppermint100/workspace/uikit-walkthrough/TodoListCoreData/TodoListCodeData/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "17C99314-6818-4524-8EDF-235FE6BACC1B - 459d291e6b4efda"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TodoListCodeData.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;TodoListCodeData.ViewController&gt;"
+                  moduleName = "TodoListCodeData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/peppermint100/workspace/uikit-walkthrough/TodoListCoreData/TodoListCodeData/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
