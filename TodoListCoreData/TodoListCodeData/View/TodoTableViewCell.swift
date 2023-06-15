@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol TodoTableViewCellDelegate: AnyObject {
+    func onTapToggle(item: TodoListItem)
+}
+
 class TodoTableViewCell: UITableViewCell {
     
+    weak var delegate: TodoTableViewCellDelegate?
     static let identifier = "TodoTableViewCell"
     
     var todo: TodoListItem? {
@@ -50,6 +55,7 @@ class TodoTableViewCell: UITableViewCell {
         contentView.addSubview(titleLabel)
         contentView.addSubview(createdAtLabel)
         contentView.addSubview(completeButton)
+
         applyConstraints()
         setUpCompleteButton()
     }
@@ -59,6 +65,7 @@ class TodoTableViewCell: UITableViewCell {
         let checkBoxImage = UIImage(systemName: "checkmark", withConfiguration: checkBoxConfig)?
             .withPadding(top: 20, leading: 20, bottom: 20, trailing: 20).withTintColor(.systemBlue)
         completeButton.setImage(checkBoxImage, for: .normal)
+        completeButton.addTarget(self, action: #selector(onTapToggleButtonTarget), for: .touchUpInside)
     }
     
     func applyConstraints() {
@@ -97,6 +104,12 @@ class TodoTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func onTapToggleButtonTarget() {
+        if let todo {
+            delegate?.onTapToggle(item: todo)
+        } else { return }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

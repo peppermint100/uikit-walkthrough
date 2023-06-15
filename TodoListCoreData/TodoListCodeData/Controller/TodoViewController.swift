@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TodoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TodoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TodoTableViewCellDelegate {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -57,13 +57,9 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func getAllItems() {
-        do {
-            models = TodoListItemManager.shared.getTodos()
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        } catch {
-            // error
+        models = TodoListItemManager.shared.getTodos()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
     
@@ -111,12 +107,17 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func onTapToggle(item: TodoListItem) {
+        completeTodo(item: item)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TodoTableViewCell.identifier, for: indexPath) as! TodoTableViewCell
+        cell.delegate = self
         cell.todo = models[indexPath.row]
         return cell
     }
