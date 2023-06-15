@@ -63,6 +63,8 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 
 - [CoreData를 이용하는 Model 설정](./inflearn-allen-course/MusicApp%20Updated%20Version/MusicApp/Models/MusicManager.swift)
 
+- [Coredata Fetch With Predicate 데이터 쿼리시 조건절](./TodoListCoreData/TodoListCodeData/Model/TodoListItemManager.swift)
+
 ## API Call
 - [URLSession으로 API 비동기 호출하기](./inflearn-allen-course/MusicApp%20Updated%20Version/MusicApp/Networking/NetworkManager.swift)
 - [URLSession으로 API 비동기 호출하기2](./Netflix-clone/Netflix%20Clone/Managers/APICaller.swift)
