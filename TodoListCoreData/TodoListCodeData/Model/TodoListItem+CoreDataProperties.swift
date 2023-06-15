@@ -2,7 +2,7 @@
 //  TodoListItem+CoreDataProperties.swift
 //  TodoListCodeData
 //
-//  Created by peppermint100 on 2023/06/11.
+//  Created by peppermint100 on 2023/06/15.
 //
 //
 
@@ -16,8 +16,9 @@ extension TodoListItem {
         return NSFetchRequest<TodoListItem>(entityName: "TodoListItem")
     }
 
-    @NSManaged public var name: String?
     @NSManaged public var createdAt: Date?
+    @NSManaged public var name: String?
+    @NSManaged public var isCompleted: Bool
 
 }
 

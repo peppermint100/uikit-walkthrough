@@ -34,10 +34,7 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     private func setUpNavigationBar() {
-        let appearance = UINavigationBarAppearance()
-        
-        navigationController?.navigationBar.compactAppearance = appearance
-        
+        title = "Todos"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
     }
     
@@ -61,7 +58,7 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func getAllItems() {
         do {
-            models = try context.fetch(TodoListItem.fetchRequest())
+            models = TodoListItemManager.shared.getTodos()
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -74,6 +71,7 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
         let newItem = TodoListItem(context: context)
         newItem.name = name
         newItem.createdAt = Date()
+        newItem.isCompleted = false
         
         do {
             try context.save()
@@ -95,6 +93,16 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func updateItem(item: TodoListItem, newName: String) {
         item.name = newName
+        do {
+            try context.save()
+            getAllItems()
+        } catch {
+            // error
+        }
+    }
+    
+    func completeTodo(item: TodoListItem) {
+        item.isCompleted = true
         do {
             try context.save()
             getAllItems()
