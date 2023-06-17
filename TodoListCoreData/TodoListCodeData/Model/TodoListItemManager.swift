@@ -31,4 +31,18 @@ final class TodoListItemManager {
             return []
         }
     }
+    
+    func getCompeltedTodo() -> [TodoListItem] {
+        let request: NSFetchRequest<TodoListItem> = TodoListItem.fetchRequest()
+        
+        let whereIsCompleted = NSPredicate(format: "isCompleted == %d", true)
+        request.predicate = whereIsCompleted
+        
+        do {
+            let result = try context?.fetch(request)
+            return result ?? []
+        } catch {
+            return []
+        }
+    }
 }

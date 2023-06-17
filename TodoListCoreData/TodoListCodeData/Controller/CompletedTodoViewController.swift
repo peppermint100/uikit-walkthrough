@@ -21,6 +21,7 @@ class CompletedTodoViewController: UIViewController {
         view.backgroundColor = .white
         setUpTableView()
         setUpNavigationBar()
+        getCompletedTodo()
     }
     
     func setUpTableView() {
@@ -34,6 +35,13 @@ class CompletedTodoViewController: UIViewController {
         tableView.separatorInset = UIEdgeInsets.zero
     }
     
+    func getCompletedTodo() {
+        models = TodoListItemManager.shared.getCompeltedTodo()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     func setUpNavigationBar() {
         title = "Completed"
     }
@@ -43,13 +51,14 @@ extension CompletedTodoViewController:
     UITableViewDelegate,
     UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return models.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: CompletedTodoTableViewCell.identifier,
             for: indexPath) as! CompletedTodoTableViewCell
+        cell.todo = models[indexPath.row]
         return cell
     }
 }

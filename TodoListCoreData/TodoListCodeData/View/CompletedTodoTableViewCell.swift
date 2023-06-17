@@ -11,6 +11,14 @@ class CompletedTodoTableViewCell: UITableViewCell {
     
     static let identifier = "CompletedTodoTableViewCell"
     
+    var todo: TodoListItem? {
+        didSet {
+            guard let todo = todo else { return }
+            titleLabel.text = todo.name
+            createdAtLabel.text = todo.createdAt?.toString()
+        }
+    }
+    
     let stackView: UIStackView = {
         let sv = UIStackView()
         sv.axis = .vertical
@@ -21,13 +29,11 @@ class CompletedTodoTableViewCell: UITableViewCell {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "이거 하기"
         return label
     }()
     
     let createdAtLabel: UILabel = {
         let label = UILabel()
-        label.text = "2023.01.01"
         label.textColor = .gray
         label.font = UIFont.systemFont(ofSize: 15)
         return label
