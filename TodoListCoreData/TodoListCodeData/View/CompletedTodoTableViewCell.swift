@@ -14,8 +14,15 @@ class CompletedTodoTableViewCell: UITableViewCell {
     var todo: TodoListItem? {
         didSet {
             guard let todo = todo else { return }
-            titleLabel.text = todo.name
             createdAtLabel.text = todo.createdAt?.toString()
+            let attributedText = NSAttributedString(string: todo.name ?? "")
+            let attributedString = NSMutableAttributedString(
+                attributedString: attributedText)
+            attributedString.addAttribute(
+                NSAttributedString.Key.strikethroughStyle,
+                value: NSUnderlineStyle.single.rawValue,
+                range: NSMakeRange(0, attributedString.length))
+            titleLabel.attributedText = attributedString
         }
     }
     
