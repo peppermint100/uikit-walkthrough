@@ -22,6 +22,7 @@
 		BA184B622A3B3DE4006230BB /* TodoListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA184B602A3B3DE4006230BB /* TodoListItem+CoreDataClass.swift */; };
 		BA184B632A3B3DE4006230BB /* TodoListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA184B612A3B3DE4006230BB /* TodoListItem+CoreDataProperties.swift */; };
 		BA184B652A3B3F3D006230BB /* TodoListItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA184B642A3B3F3D006230BB /* TodoListItemManager.swift */; };
+		BA184B672A3CB7C4006230BB /* CompletedTodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA184B662A3CB7C4006230BB /* CompletedTodoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		BA184B602A3B3DE4006230BB /* TodoListItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoListItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BA184B612A3B3DE4006230BB /* TodoListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA184B642A3B3F3D006230BB /* TodoListItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListItemManager.swift; sourceTree = "<group>"; };
+		BA184B662A3CB7C4006230BB /* CompletedTodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTodoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				BA184B4A2A35E2EB006230BB /* TodoTableViewCell.swift */,
+				BA184B662A3CB7C4006230BB /* CompletedTodoTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			files = (
 				BA184B4F2A361A84006230BB /* UIImageUtil.swift in Sources */,
 				BA184B632A3B3DE4006230BB /* TodoListItem+CoreDataProperties.swift in Sources */,
+				BA184B672A3CB7C4006230BB /* CompletedTodoTableViewCell.swift in Sources */,
 				BA184B5F2A3B2647006230BB /* MainTabbarViewController.swift in Sources */,
 				BA184B4B2A35E2EB006230BB /* TodoTableViewCell.swift in Sources */,
 				BA184B652A3B3F3D006230BB /* TodoListItemManager.swift in Sources */,

@@ -26,11 +26,13 @@ class TodoTableViewCell: UITableViewCell {
     
     let titleLabel: UILabel = {
         let label = UILabel()
+        label.text = "123"
         return label
     }()
     
     let createdAtLabel: UILabel = {
         let label = UILabel()
+        label.text = "123"
         label.textColor = .gray
         label.font = UIFont.systemFont(ofSize: 15)
         return label
@@ -117,5 +119,4 @@ class TodoTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

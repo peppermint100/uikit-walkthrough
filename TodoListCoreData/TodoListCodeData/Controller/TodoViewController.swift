@@ -31,6 +31,7 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         tableView.frame = view.bounds
         tableView.register(TodoTableViewCell.self, forCellReuseIdentifier: TodoTableViewCell.identifier)
+        tableView.separatorInset = UIEdgeInsets.zero
     }
     
     private func setUpNavigationBar() {
@@ -116,7 +117,9 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TodoTableViewCell.identifier, for: indexPath) as! TodoTableViewCell
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: TodoTableViewCell.identifier,
+            for: indexPath) as! TodoTableViewCell
         cell.delegate = self
         cell.todo = models[indexPath.row]
         return cell

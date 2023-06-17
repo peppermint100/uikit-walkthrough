@@ -20,7 +20,7 @@ class MainTabbarViewController: UITabBarController {
         completedTodoVC.title = "Completed"
         completedTodoVC.tabBarItem.image = UIImage(systemName: "checkmark.diamond")
         
-        setViewControllers([todoVC, completedTodoVC], animated: true)
+        setViewControllers([completedTodoVC, todoVC], animated: true)
     }
     
 
