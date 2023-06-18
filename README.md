@@ -40,6 +40,10 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 ## Keyboard
 - [키보드, 텍스트필드 등 바깥 영역 터치시 키보드 내림 touchesBegan](./inflearn-allen-course/MemberList/MemberList/Views/DetailView.swift)
 
+# Delegate
+- [커스텀 델리게이트 컨트롤러](./TodoListCoreData/TodoListCodeData/Controller/TodoViewController.swift)
+- [커스텀 델리게이트 뷰](./TodoListCoreData/TodoListCodeData/View/TodoTableViewCell.swift)
+
 ## Image
 - [sd_image 사용](./Netflix-clone//Netflix%20Clone/Views/TitleTableViewCell.swift)
 
