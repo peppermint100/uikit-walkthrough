@@ -26,6 +26,8 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 
 - [네비게이션 바 UI 설정](./inflearn-allen-course/MemberList/MemberList/Controllers/ViewController.swift)
 
+- [네비게이션 바 큰 타이틀 설정](./SpotifyClone/SpotifyClone/Controllers/Core/TabBarViewController.swift`)
+
 ## Tabbar
 - [탭바 기본 설정](./inflearn-allen-course/N%26TProjectCode/N%26TProjectCode/LoginViewController.swift)
 - [SceneDeligate에서 탭바 설정](./Netflix-clone/Netflix%20Clone/../Netflix%20Clone/Resources/SceneDelegate.swift)
