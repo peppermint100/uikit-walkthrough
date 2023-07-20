@@ -87,3 +87,7 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 
 ## Webview
 - [웹뷰 기본 세팅](./SpotifyClone/SpotifyClone/Controllers/Other/AuthViewController.swift`)
+
+## environment
+
+- [Scheme 환경변수 사용법](./SpotifyClone/SpotifyClone/Managers/AuthManager.swift`)
