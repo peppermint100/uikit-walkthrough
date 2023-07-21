@@ -53,12 +53,12 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "spotify_client_secret"
-            value = "cereqa"
+            value = "62f7e6400f374f4780caf39ed559ec30"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "spotify_client_id"
-            value = "123"
+            value = "d01a7d13ace645cb85fa73d68c200a8f"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

@@ -30,6 +30,7 @@
 		BA7AA5642A6401A500BD3D3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA7AA5632A6401A500BD3D3C /* Assets.xcassets */; };
 		BA7AA5672A6401A500BD3D3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7AA5652A6401A500BD3D3C /* LaunchScreen.storyboard */; };
 		BA7AA5742A641D6400BD3D3C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7AA5732A641D6400BD3D3C /* Extensions.swift */; };
+		E59E8E682A6A799700075938 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59E8E672A6A799700075938 /* AuthResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		BA7AA5662A6401A500BD3D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA7AA5682A6401A500BD3D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA7AA5732A641D6400BD3D3C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E59E8E672A6A799700075938 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				BA5D2B892A6958130032D5B8 /* AudioTrack.swift */,
 				BA5D2B8B2A6958220032D5B8 /* Artist.swift */,
 				BA5D2B8D2A6958310032D5B8 /* UserProfile.swift */,
+				E59E8E672A6A799700075938 /* AuthResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				BA5D2B822A6957D00032D5B8 /* AuthManager.swift in Sources */,
 				BA5D2B7D2A69578C0032D5B8 /* PlaylistViewController.swift in Sources */,
 				BA5D2B8A2A6958130032D5B8 /* AudioTrack.swift in Sources */,
+				E59E8E682A6A799700075938 /* AuthResponse.swift in Sources */,
 				BA7AA55F2A6401A400BD3D3C /* HomeViewController.swift in Sources */,
 				BA5D2B842A6957DB0032D5B8 /* APICaller.swift in Sources */,
 				BA5D2B862A6957EA0032D5B8 /* HapticsManager.swift in Sources */,

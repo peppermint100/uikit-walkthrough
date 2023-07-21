@@ -49,22 +49,14 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
         })?.value else {
             return
         }
-        /*
-         */
-    }
-    
-    public func exchangeCodeForToken(
-        code: String,
-        completion: @escaping ((Bool) -> Void)
-    ) {
         
-    }
-    
-    public func refreshAccessToken() {
+        webView.isHidden = true
         
-    }
-    
-    private func cacheToken() {
-        
+        AuthManager.shared.exchangeCodeForToken(code: code) { [weak self] success in
+            DispatchQueue.main.async {
+                self?.navigationController?.popToRootViewController(animated: true)
+                self?.completionHandler?(success)
+            }
+        }
     }
 }
