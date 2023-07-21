@@ -75,6 +75,7 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 - [URLSession으로 API 비동기 호출하기](./inflearn-allen-course/MusicApp%20Updated%20Version/MusicApp/Networking/NetworkManager.swift)
 - [URLSession으로 API 비동기 호출하기2](./Netflix-clone/Netflix%20Clone/Managers/APICaller.swift)
 - [API에서 불러온 파라미터 이름 스위프트에 맞게 바꾸기 Codingkey](./inflearn-allen-course/MusicApp/MusicApp/Models/Music.swift)
+- [HTTP Method, HTTP Body 세팅](./SpotifyClone/SpotifyClone/Managers/AuthManager.swift`)
 
 ## Alert
 - [Alert 띄우기](./inflearn-allen-course/MusicApp%20Updated%20Version/MusicApp/Controllers/SavedListViewController.swift)
@@ -89,5 +90,10 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 - [웹뷰 기본 세팅](./SpotifyClone/SpotifyClone/Controllers/Other/AuthViewController.swift`)
 
 ## environment
-
 - [Scheme 환경변수 사용법](./SpotifyClone/SpotifyClone/Managers/AuthManager.swift`)
+
+## Auth
+- [로그인 유무에 따른 다른 VC 보여주기](./SpotifyClone/SpotifyClone/Resources/AppDelegate.swift`)
+
+## Frame
+- [Frame 쉽게 잡는 Extension](./SpotifyClone/SpotifyClone/Resources/Extensions.swiftt`)
