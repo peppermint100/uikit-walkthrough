@@ -13,6 +13,8 @@ final class AuthManager {
     
     private init() {}
     
+    private var refreshingToken = false
+    
     struct Constants {
         static let clientID = ProcessInfo.processInfo.environment["spotify_client_id"]!
         static let clientSecret = ProcessInfo.processInfo.environment["spotify_client_secret"]!
@@ -97,22 +99,51 @@ final class AuthManager {
         UserDefaults.standard.setValue(result.access_token, forKey: "access_token")
         
         if let refresh_token = result.refresh_token {
-            UserDefaults.standard.setValue(result.refresh_token, forKey: "refresh_token")
+            UserDefaults.standard.setValue(refresh_token, forKey: "refresh_token")
         }
         
         UserDefaults.standard.setValue(Date().addingTimeInterval(TimeInterval(result.expires_in)), forKey: "expirationDate")
     }
     
-    public func refreshIfNedded(completion: @escaping (Bool) -> Void) {
+    private var onRefreshBlocks = [((String) -> Void)]()
+    
+    public func withValidToken(completion: @escaping (String) -> Void) {
+        guard !refreshingToken else {
+            onRefreshBlocks.append(completion)
+            return
+        }
+        
+        if shouldRefreshToken {
+            refreshIfNeeded { [weak self] success in
+                if success {
+                    if let token = self?.accessToken {
+                        completion(token)
+                    }
+                }
+            }
+        } else if let token = accessToken {
+            completion(token)
+        }
+    }
+    
+    
+    public func refreshIfNeeded(completion: @escaping (Bool) -> Void) {
+        guard !refreshingToken else {
+            return
+        }
+        
         guard shouldRefreshToken else {
             completion(true)
             return
         }
+        
         guard let refreshToken = self.refreshToken else {
             return
         }
         
         guard let url = URL(string: Constants.tokenAPIUrl) else { return }
+        
+        refreshingToken = true
         
         var components = URLComponents()
         
@@ -134,6 +165,7 @@ final class AuthManager {
         request.setValue("Basic \(base64String)", forHTTPHeaderField: "Authorization")
         
         let task = URLSession.shared.dataTask(with: request) {[weak self] data, _, error in
+            self?.refreshingToken = false
             guard let data = data, error == nil else {
                 completion(false)
                 return
@@ -142,6 +174,8 @@ final class AuthManager {
             do {
                 let result = try JSONDecoder().decode(AuthResponse.self, from: data)
                 print("successfully refreshed")
+                self?.onRefreshBlocks.forEach { $0(result.access_token) }
+                self?.onRefreshBlocks.removeAll()
                 self?.cacheToken(result: result)
                 completion(true)
             } catch {
