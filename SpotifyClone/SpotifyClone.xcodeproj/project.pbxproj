@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA4AEC092A6FF7CA00484AB4 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4AEC082A6FF7CA00484AB4 /* SettingsModels.swift */; };
 		BA5D2B6B2A6955FF0032D5B8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D2B6A2A6955FF0032D5B8 /* TabBarViewController.swift */; };
 		BA5D2B6D2A6956E30032D5B8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D2B6C2A6956E30032D5B8 /* SearchViewController.swift */; };
 		BA5D2B6F2A6956F00032D5B8 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D2B6E2A6956F00032D5B8 /* LibraryViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA4AEC082A6FF7CA00484AB4 /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
 		BA5D2B6A2A6955FF0032D5B8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		BA5D2B6C2A6956E30032D5B8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BA5D2B6E2A6956F00032D5B8 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				BA5D2B8B2A6958220032D5B8 /* Artist.swift */,
 				BA5D2B8D2A6958310032D5B8 /* UserProfile.swift */,
 				E59E8E672A6A799700075938 /* AuthResponse.swift */,
+				BA4AEC082A6FF7CA00484AB4 /* SettingsModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				BA5D2B882A6958080032D5B8 /* Playlist.swift in Sources */,
 				BA5D2B7F2A69579A0032D5B8 /* SearchResultViewController.swift in Sources */,
 				BA5D2B792A69576F0032D5B8 /* ProfileViewController.swift in Sources */,
+				BA4AEC092A6FF7CA00484AB4 /* SettingsModels.swift in Sources */,
 				BA5D2B732A6957420032D5B8 /* AuthViewController.swift in Sources */,
 				BA5D2B6F2A6956F00032D5B8 /* LibraryViewController.swift in Sources */,
 				BA7AA55D2A6401A400BD3D3C /* SceneDelegate.swift in Sources */,

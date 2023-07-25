@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct UserProfile {
+struct UserProfile: Codable {
     let display_name: String
     let external_urls: [String: String]
-    let followers: [String: Codable?]
+//    let followers: [String: Codable?]
     let id: String
     let images: [UserImage]
 }
