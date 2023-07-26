@@ -9,6 +9,8 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 - [테이블 뷰에서 이미지 재사용 막기 2](./inflearn-allen-course/MusicApp/MusicApp/Views/MusicCollectionViewCell.swift)
 - [테이블 뷰 높이설정, 스크롤 종료 Delegate](./inflearn-allen-course/MusicApp%20Updated%20Version/MusicApp/Controllers/ViewController.swift)
 - [테이블 뷰 헤더 설정](./Netflix-clone/Netflix%20Clone/Controllers/Core/HomeViewController.swift)
+- [테이블 뷰 섹션 설정](./SpotifyClone/SpotifyClone/Controllers/Other/SettingsViewController.swift)
+
 
 ## CollectionView
 - [컬렉션 뷰 셀 설정](./Netflix-clone/Netflix%20Clone/Views/CollectionViewTableViewCell.swift)
