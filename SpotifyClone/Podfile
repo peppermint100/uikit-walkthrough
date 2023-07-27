@@ -5,7 +5,7 @@ target 'SpotifyClone' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   # Pods for SpotifyClone
-  pod 'SDWebImage'
-  pod 'Appirater'
-  pod 'Firebase/Analytics'
+  pod 'SDWebImage', :modular_headers => true
+  pod 'Appirater', :modular_headers => true
+  pod 'Firebase/Analytics', :modular_headers => true
 end
