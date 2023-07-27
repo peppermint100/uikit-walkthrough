@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -53,7 +54,26 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         models.append("Full Name: \(model.display_name)")
         models.append("External URL: \(model.external_urls)")
         models.append("ID: \(model.id)")
+//        createTableHeader(with: model.images.first?.url)
+        createTableHeader(with: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png")
         tableView.reloadData()
+    }
+    
+    private func createTableHeader(with string: String?) {
+        guard let urlString = string, let url = URL(string: urlString) else {
+            return
+        }
+        
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: view.width/1.5))
+        let imageSize: CGFloat = headerView.height / 2
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: imageSize, height: imageSize))
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = imageSize / 2
+        headerView.addSubview(imageView)
+        imageView.center = headerView.center
+        imageView.contentMode = .scaleAspectFit
+        imageView.sd_setImage(with: url, completed: nil)
+        tableView.tableHeaderView = headerView
     }
     
     private func failedToGetProfile() {
