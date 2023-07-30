@@ -64,7 +64,7 @@ final class APICaller {
     }
     
     public func getNewReleases(completion: @escaping ((Result<NewReleasesResponse, Error>)) -> Void) {
-        createRequest(with: URL(string: Constant.baseAPIURL + "/browse/new-releases?limit=1"), type: .GET) { request in
+        createRequest(with: URL(string: Constant.baseAPIURL + "/browse/new-releases?limit=5"), type: .GET) { request in
             let task = URLSession.shared.dataTask(with: request) { data, _, error in
                 guard let data = data, error == nil else {
                     completion(.failure(APIError.failedToGetData))
