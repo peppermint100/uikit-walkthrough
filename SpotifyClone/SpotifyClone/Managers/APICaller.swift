@@ -85,7 +85,7 @@ final class APICaller {
     
     public func getFeaturedPlayLists(completion: @escaping ((Result<FeaturedPlaylistsResponse, Error>) -> Void)) {
         createRequest(
-            with: URL(string: Constant.baseAPIURL + "/browse/featured-playlists?limit=2"),
+            with: URL(string: Constant.baseAPIURL + "/browse/featured-playlists?limit=10"),
             type: .GET) { request in
                 let task = URLSession.shared.dataTask(with: request) { data, _, error in
                     guard let data = data, error == nil else {
