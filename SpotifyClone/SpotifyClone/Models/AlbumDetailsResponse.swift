@@ -1,21 +1,25 @@
 //
-//  AudioTrac.swift
+//  AlbumDetailsResponse.swift
 //  SpotifyClone
 //
-//  Created by peppermint100 on 2023/07/20.
+//  Created by peppermint100 on 2023/07/31.
 //
 
 import Foundation
 
-struct AudioTrack: Codable {
-    let album: Album?
+struct AlbumDetailsResponse: Codable {
+    let album_type: String
     let artists: [Artist]
-    let disc_number: Int
-    let duration_ms: Int
-    let explicit: Bool
     let external_urls: [String: String]
     let id: String
+    let images: [APIImage]
+    let label: String
     let name: String
+    let tracks: TracksResponse
+}
+
+struct TracksResponse: Codable {
+    let items: [AudioTrack]
 }
 
 /*
@@ -156,4 +160,3 @@ struct AudioTrack: Codable {
  }
 
  */
-
