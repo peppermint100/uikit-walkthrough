@@ -18,6 +18,7 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 - [컬렉션 뷰 헤더 설정](./SpotifyClone/SpotifyClone/Controllers/Other/AlbumViewController.swift)
 - [컬렉션 뷰 리유저블 뷰 설정](./SpotifyClone/SpotifyClone/View/TitleHeaderCollectionReusableView.swift)
 - [복잡한 컬렉션 뷰](./SpotifyClone/SpotifyClone/Controllers/Core/HomeViewController.swift)
+- [컬렉션 뷰 컴포지셔널 레이아웃](./SpotifyClone/SpotifyClone/Controllers/Core/SearchViewController.swift)
 
 ## TextField
 - [텍스트 필드 Delegate](./inflearn-allen-course/LoginViewApp/LoginViewApp/ViewController.swift)
