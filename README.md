@@ -15,6 +15,9 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 ## CollectionView
 - [컬렉션 뷰 셀 설정](./Netflix-clone/Netflix%20Clone/Views/CollectionViewTableViewCell.swift)
 - [컬렉션 뷰 레이아웃 설정](./Netflix-clone/Netflix%20Clone/Controllers/General/SearchResultsViewController.swift)
+- [컬렉션 뷰 헤더 설정](./SpotifyClone/SpotifyClone/Controllers/Other/AlbumViewController.swift)
+- [컬렉션 뷰 리유저블 뷰 설정](./SpotifyClone/SpotifyClone/View/TitleHeaderCollectionReusableView.swift)
+- [복잡한 컬렉션 뷰](./SpotifyClone/SpotifyClone/Controllers/Core/HomeViewController.swift)
 
 ## TextField
 - [텍스트 필드 Delegate](./inflearn-allen-course/LoginViewApp/LoginViewApp/ViewController.swift)
@@ -78,6 +81,7 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 - [URLSession으로 API 비동기 호출하기2](./Netflix-clone/Netflix%20Clone/Managers/APICaller.swift)
 - [API에서 불러온 파라미터 이름 스위프트에 맞게 바꾸기 Codingkey](./inflearn-allen-course/MusicApp/MusicApp/Models/Music.swift)
 - [HTTP Method, HTTP Body 세팅](./SpotifyClone/SpotifyClone/Managers/AuthManager.swift`)
+- [여러 API 모두 불러왔는지 group을 통한 확인](./SpotifyClone/SpotifyClone/Controllers/Core/HomeViewController.swift)
 
 ## Alert
 - [Alert 띄우기](./inflearn-allen-course/MusicApp%20Updated%20Version/MusicApp/Controllers/SavedListViewController.swift)
