@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA147C812A7D4E89004211C1 /* GenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA147C802A7D4E89004211C1 /* GenreCollectionViewCell.swift */; };
 		BA4AEC092A6FF7CA00484AB4 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4AEC082A6FF7CA00484AB4 /* SettingsModels.swift */; };
 		BA518BCE2A77EA890049A7EA /* AlbumDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA518BCD2A77EA890049A7EA /* AlbumDetailsResponse.swift */; };
 		BA518BD02A77EE380049A7EA /* PlaylistDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA518BCF2A77EE380049A7EA /* PlaylistDetailsResponse.swift */; };
@@ -58,6 +59,7 @@
 		7E0BF02C6F16EF6C18D831F4 /* Pods-SpotifyClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyClone.debug.xcconfig"; path = "Target Support Files/Pods-SpotifyClone/Pods-SpotifyClone.debug.xcconfig"; sourceTree = "<group>"; };
 		A0A9C9D7ED3D262CEEE22542 /* Pods-SpotifyClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyClone.release.xcconfig"; path = "Target Support Files/Pods-SpotifyClone/Pods-SpotifyClone.release.xcconfig"; sourceTree = "<group>"; };
 		A3828BF322F8D92ADF18E0FF /* Pods_SpotifyClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotifyClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA147C802A7D4E89004211C1 /* GenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA4AEC082A6FF7CA00484AB4 /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
 		BA518BCD2A77EA890049A7EA /* AlbumDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsResponse.swift; sourceTree = "<group>"; };
 		BA518BCF2A77EE380049A7EA /* PlaylistDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailsResponse.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				BA518BD12A7939CF0049A7EA /* PlaylistHeaderCollectionReusableView.swift */,
 				BA518BD52A7D28520049A7EA /* TitleHeaderCollectionReusableView.swift */,
 				BA518BD72A7D44720049A7EA /* AlbumTrackCollectionViewCell.swift */,
+				BA147C802A7D4E89004211C1 /* GenreCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				BA5D2B7D2A69578C0032D5B8 /* PlaylistViewController.swift in Sources */,
 				BAFE9DC72A757C920061FDDE /* RecommendedTrackCollectionViewCell.swift in Sources */,
 				BA5D2B8A2A6958130032D5B8 /* AudioTrack.swift in Sources */,
+				BA147C812A7D4E89004211C1 /* GenreCollectionViewCell.swift in Sources */,
 				E59E8E682A6A799700075938 /* AuthResponse.swift in Sources */,
 				BAEED0D32A74EF930071116B /* NewReleasesResponse.swift in Sources */,
 				BA518BD82A7D44720049A7EA /* AlbumTrackCollectionViewCell.swift in Sources */,
