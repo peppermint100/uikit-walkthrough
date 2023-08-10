@@ -68,6 +68,47 @@ final class APICaller {
             task.resume()
         }
     }
+    
+    // MARK: - Search
+    public func search(with query: String, completion: @escaping(Result<[SearchResult], Error>) -> Void) {
+        createRequest(
+            with: URL(string: Constant.baseAPIURL + "/search?limit=10&type=album,artist,playlist,track&q=\(query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")"),
+            type: .GET
+        ) { request in
+            print(request.url?.absoluteURL ?? "none")
+            let task = URLSession.shared.dataTask(with: request) { data, _, error in
+                guard let data = data, error == nil else {
+                    completion(.failure(APIError.failedToGetData))
+                    return
+                }
+                
+                do {
+                    let result = try JSONDecoder().decode(SearchResultResponse.self, from: data)
+                    var searchResults: [SearchResult] = []
+                    searchResults.append(contentsOf:result.tracks.items.compactMap({
+                        SearchResult.track(model: $0)
+                    }))
+                    searchResults.append(contentsOf:result.albums.items.compactMap({
+                        SearchResult.album(model: $0)
+                    }))
+                    searchResults.append(contentsOf:result.artists.items.compactMap({
+                        SearchResult.artist(model: $0)
+                    }))
+                    searchResults.append(contentsOf:result.playlists.items.compactMap({
+                        SearchResult.playlist(model: $0)
+                    }))
+                    completion(.success(searchResults))
+                }
+                catch {
+                    completion(.failure(error))
+                    print(error.localizedDescription)
+                }
+            }
+            
+            task.resume()
+        }
+    }
+    
     // MARK: - Profile
     
     public func getCurrentUserProfile(completion: @escaping (Result<UserProfile, Error>) -> Void) {
@@ -131,8 +172,6 @@ final class APICaller {
             task.resume()
         }
     }
-    
-    
     
     enum HTTPMethod: String {
         case GET
