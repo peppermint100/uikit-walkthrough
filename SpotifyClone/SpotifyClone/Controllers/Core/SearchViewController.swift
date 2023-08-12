@@ -5,6 +5,7 @@
 //  Created by peppermint100 on 2023/07/20.
 //
 
+import SafariServices
 import UIKit
 
 class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate {
@@ -116,7 +117,14 @@ extension SearchViewController: SeearchResultsViewControllerDelegate {
     func didTapResult(_ result: SearchResult) {
         switch result {
         case .artist(let model):
-            break
+            guard let url = URL(string: model.external_urls["spotify"] ?? "") else {
+                return
+            }
+            
+            let vc = SFSafariViewController(url: url)
+            // 프리젠트 메소드를 사용을 해도 SFSafariVC는 네비게이션 푸시뷰컨트롤러처럼 작동한다.
+            present(vc, animated: true)
+            
         case .album(let model):
             let vc = AlbumViewController(album: model)
             vc.navigationController?.navigationItem.largeTitleDisplayMode = .never

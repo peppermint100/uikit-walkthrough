@@ -173,6 +173,7 @@ final class APICaller {
         }
     }
     
+    // MARK: - HTTP
     enum HTTPMethod: String {
         case GET
         case POST
