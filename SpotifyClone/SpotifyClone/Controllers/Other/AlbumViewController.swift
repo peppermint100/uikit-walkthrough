@@ -9,6 +9,7 @@ import UIKit
 
 class AlbumViewController: UIViewController {
     
+    private var tracks = [AudioTrack]()
     private var album: Album
     private let collectionView = UICollectionView(
         frame: .zero,
@@ -66,6 +67,7 @@ class AlbumViewController: UIViewController {
                             name: $0.name,
                             artistName: $0.artists.first?.name ?? "-")
                     })
+                    self?.tracks = model.tracks.items
                     self?.collectionView.reloadData()
                     break
                 case .failure(let error):
@@ -125,10 +127,13 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        let track = tracks[indexPath.row]
+        PlaybackPresenter.startPlayback(from: self, track: track)
     }
 }
 
 extension AlbumViewController: PlaylistHeaderCollectionReusableViewDelegate {
     func playlistHeaderCollectionReusableViewDidTapPlayAll(_ header: PlaylistHeaderCollectionReusableView) {
+        PlaybackPresenter.startPlayback(from: self, tracks: tracks)
     }
 }
