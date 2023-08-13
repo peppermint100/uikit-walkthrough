@@ -22,7 +22,6 @@ class PlayerViewController: UIViewController {
     
     private let imageView: UIImageView = {
         let iv = UIImageView()
-        iv.backgroundColor = .systemBlue
         iv.contentMode = .scaleAspectFill
         return iv
     }()
@@ -73,6 +72,10 @@ class PlayerViewController: UIViewController {
     
     @objc private func didTapAction() {
     }
+    
+    func refreshUI() {
+        configure()
+    }
 }
 
 extension PlayerViewController: PlayerControlsViewDelegate {
@@ -89,7 +92,6 @@ extension PlayerViewController: PlayerControlsViewDelegate {
     }
     
     func playerControlsView(_ playerControlsView: PlayerControlsView, didSlideSlider value: Float) {
-        print("from controller: \(value)")
         delegate?.didSlideSlider(value)
     }
 }

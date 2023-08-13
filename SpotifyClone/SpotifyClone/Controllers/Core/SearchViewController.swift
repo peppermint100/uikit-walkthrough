@@ -84,8 +84,6 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
               !query.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-
-        print(query)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
