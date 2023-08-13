@@ -131,7 +131,7 @@ extension SearchViewController: SeearchResultsViewControllerDelegate {
             navigationController?.pushViewController(vc, animated: true)
             break
         case .track(let model):
-            PlaybackPresenter.startPlayback(from: self, track: model)
+            PlaybackPresenter.shared.startPlayback(from: self, track: model)
             break
         case .playlist(let model):
             let vc = PlaylistViewController(playlist: model)
