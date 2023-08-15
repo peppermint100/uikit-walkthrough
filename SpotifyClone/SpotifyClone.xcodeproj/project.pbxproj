@@ -23,6 +23,8 @@
 		BA4EBBD32A8B5279004A218F /* LibraryPlaylistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4EBBD22A8B5279004A218F /* LibraryPlaylistsViewController.swift */; };
 		BA4EBBD52A8B5292004A218F /* LibraryAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4EBBD42A8B5292004A218F /* LibraryAlbumsViewController.swift */; };
 		BA4EBBD72A8B563B004A218F /* LibraryToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4EBBD62A8B563B004A218F /* LibraryToggleView.swift */; };
+		BA4EBBD92A8B718E004A218F /* LibraryPlaylistsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4EBBD82A8B718E004A218F /* LibraryPlaylistsResponse.swift */; };
+		BA4EBBDB2A8B747B004A218F /* ActionLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4EBBDA2A8B747B004A218F /* ActionLabelView.swift */; };
 		BA518BCE2A77EA890049A7EA /* AlbumDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA518BCD2A77EA890049A7EA /* AlbumDetailsResponse.swift */; };
 		BA518BD02A77EE380049A7EA /* PlaylistDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA518BCF2A77EE380049A7EA /* PlaylistDetailsResponse.swift */; };
 		BA518BD22A7939CF0049A7EA /* PlaylistHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA518BD12A7939CF0049A7EA /* PlaylistHeaderCollectionReusableView.swift */; };
@@ -89,6 +91,8 @@
 		BA4EBBD22A8B5279004A218F /* LibraryPlaylistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPlaylistsViewController.swift; sourceTree = "<group>"; };
 		BA4EBBD42A8B5292004A218F /* LibraryAlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAlbumsViewController.swift; sourceTree = "<group>"; };
 		BA4EBBD62A8B563B004A218F /* LibraryToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryToggleView.swift; sourceTree = "<group>"; };
+		BA4EBBD82A8B718E004A218F /* LibraryPlaylistsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPlaylistsResponse.swift; sourceTree = "<group>"; };
+		BA4EBBDA2A8B747B004A218F /* ActionLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionLabelView.swift; sourceTree = "<group>"; };
 		BA518BCD2A77EA890049A7EA /* AlbumDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsResponse.swift; sourceTree = "<group>"; };
 		BA518BCF2A77EE380049A7EA /* PlaylistDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailsResponse.swift; sourceTree = "<group>"; };
 		BA518BD12A7939CF0049A7EA /* PlaylistHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 				BA147C822A7F52B5004211C1 /* AllCategoriesResponse.swift */,
 				BA147C882A84B252004211C1 /* SearchResultResponse.swift */,
 				BA147C8A2A84B384004211C1 /* SearachResult.swift */,
+				BA4EBBD82A8B718E004A218F /* LibraryPlaylistsResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				BA147C802A7D4E89004211C1 /* GenreCollectionViewCell.swift */,
 				BA4EBBCF2A87D820004A218F /* PlayerControlsView.swift */,
 				BA4EBBD62A8B563B004A218F /* LibraryToggleView.swift */,
+				BA4EBBDA2A8B747B004A218F /* ActionLabelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -468,6 +474,7 @@
 				BA5D2B8E2A6958310032D5B8 /* UserProfile.swift in Sources */,
 				BA4EBBCE2A87CFE0004A218F /* PlaybackPresenter.swift in Sources */,
 				BA4EBBC52A85071F004A218F /* SearchResultsDefaultTableViewCell.swift in Sources */,
+				BA4EBBDB2A8B747B004A218F /* ActionLabelView.swift in Sources */,
 				BAFE9DC92A7632810061FDDE /* NewReleasesCellViewModel.swift in Sources */,
 				BA518BDA2A7D45330049A7EA /* AlbumCollectionViewCellViewModel.swift in Sources */,
 				BAFE9DCD2A77D2200061FDDE /* RecommendedTrackCellViewModel.swift in Sources */,
@@ -490,6 +497,7 @@
 				BA147C812A7D4E89004211C1 /* GenreCollectionViewCell.swift in Sources */,
 				BA4EBBC92A87959C004A218F /* SearchResultSubtitleTableViewCell.swift in Sources */,
 				BA4EBBD52A8B5292004A218F /* LibraryAlbumsViewController.swift in Sources */,
+				BA4EBBD92A8B718E004A218F /* LibraryPlaylistsResponse.swift in Sources */,
 				E59E8E682A6A799700075938 /* AuthResponse.swift in Sources */,
 				BAEED0D32A74EF930071116B /* NewReleasesResponse.swift in Sources */,
 				BA518BD82A7D44720049A7EA /* AlbumTrackCollectionViewCell.swift in Sources */,
