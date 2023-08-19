@@ -104,3 +104,14 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 
 ## Frame
 - [Frame 쉽게 잡는 Extension](./SpotifyClone/SpotifyClone/Resources/Extensions.swiftt`)
+
+## AVFoundation
+- [AVPlayer](./SpotifyClone/SpotifyClone/Presenter/PlaybacakPresenter.swift)
+
+## Custom Datasource
+- [커스텀 데이터소스 설정](./SpotifyClone/SpotifyClone/Presenter/PlaybacakPresenter.swift)
+- [커스텀 데이터소스 뷰컨트롤러에서 사용](./SpotifyClone/SpotifyClone/Controllers/Other/PlayerViewController.swift)
+
+## SearchBar
+- [SearchViewController 설정](./SpotifyClone/SpotifyClone/Controllers/Core/SearchViewController.swift)
+- [SearchViewController 델리게이트 설정](./SpotifyClone/SpotifyClone/Controllers/Other/SearchResultsViewController.swift)
