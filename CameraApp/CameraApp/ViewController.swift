@@ -65,7 +65,6 @@ class ViewController: UIViewController {
     // MARK: - 텍스트 인식
     
     @objc private func readTextProcess() {
-        // 이미지 뷰에 이미지가 있는지 확인
         guard let uiImage = imageView.image else {
             openCameraProcess()
             return
@@ -76,7 +75,38 @@ class ViewController: UIViewController {
             return
         }
         
-        openSheetWithText("This Text")
+        let request = VNRecognizeTextRequest{ [weak self] request, error in
+            guard let observations = request.results as? [VNRecognizedTextObservation],
+                  error == nil else{
+                return
+            }
+            
+            let text = observations.compactMap({
+                $0.topCandidates(1).first?.string
+            }).joined(separator: "\n")
+           
+            DispatchQueue.main.async { [weak self] in
+                self?.openSheetWithText(text)
+            }
+        }
+        
+        if #available(iOS 16.0, *) {
+          request.revision = VNRecognizeTextRequestRevision3
+          request.recognitionLanguages = ["ko-KR"]
+        } else {
+          request.recognitionLanguages = ["en-US"]
+        }
+        
+        request.recognitionLevel = .accurate
+        request.usesLanguageCorrection = true
+        
+        let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+        
+        do{
+            try handler.perform([request])
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     private func openSheetWithText(_ text: String) {
@@ -85,59 +115,9 @@ class ViewController: UIViewController {
             sheet.detents = [.medium(), .large()]
             sheet.prefersGrabberVisible = true
         }
+        
         present(vc, animated: true, completion: nil)
     }
-    
-//    fileprivate func recognizeText(image: UIImage?){
-//            guard let cgImage = image?.cgImage else {
-//                fatalError("could not get image")
-//            }
-//            
-//            let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
-//            let request = VNRecognizeTextRequest{ [weak self]request, error in
-//                
-//                guard let observations = request.results as? [VNRecognizedTextObservation],
-//                      error == nil else{
-//                    return
-//                }
-//                
-//                let text = observations.compactMap({
-//                    $0.topCandidates(1).first?.string
-//                }).joined(separator: "\n")
-//
-//                DispatchQueue.main.async {
-//                    self?.label.text = text
-//                }
-//            }
-//       
-//            if #available(iOS 16.0, *) {
-//                let revision3 = VNRecognizeTextRequestRevision3
-//                request.revision = revision3
-//                request.recognitionLevel = .accurate
-//                request.recognitionLanguages =  [commonVisionLang]
-//                request.usesLanguageCorrection = true
-//
-//                do {
-//                    var possibleLanguages: Array<String> = []
-//                    possibleLanguages = try request.supportedRecognitionLanguages()
-//                    print(possibleLanguages)
-//                } catch {
-//                    print("Error getting the supported languages.")
-//                }
-//            } else {
-//                // Fallback on earlier versions
-//                request.recognitionLanguages =  ["en-US"]
-//                request.usesLanguageCorrection = true
-//            }
-//        
-//            do{
-//                try handler.perform([request])
-//            } catch {
-//                label.text = "\(error)"
-//                print(error)
-//            }
-//        }
-//    }
     
     // MARK: - 카메라 열기
     
