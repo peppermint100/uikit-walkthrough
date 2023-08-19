@@ -7,8 +7,18 @@
 
 import UIKit
 import AVFoundation
+import Vision
+import VisionKit
 
 class ViewController: UIViewController {
+    
+    private let imageView: UIImageView = {
+        let iv = UIImageView()
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        iv.backgroundColor = .red
+        iv.contentMode = .scaleAspectFit
+        return iv
+    }()
     
     private let openCameraButton: UIButton = {
         let button = UIButton()
@@ -17,21 +27,119 @@ class ViewController: UIViewController {
         return button
     }()
     
+    private let readTextInImageButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("텍스트 인식하기", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(imageView)
         view.addSubview(openCameraButton)
+        view.addSubview(readTextInImageButton)
         openCameraButton.addTarget(self, action: #selector(openCameraProcess), for: .touchUpInside)
+        readTextInImageButton.addTarget(self, action: #selector(readTextProcess), for: .touchUpInside)
         setupConstraints()
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            openCameraButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            openCameraButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            imageView.heightAnchor.constraint(equalToConstant: view.frame.height * 0.7),
+            openCameraButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 30),
+            openCameraButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             openCameraButton.widthAnchor.constraint(equalToConstant: 200),
-            openCameraButton.heightAnchor.constraint(equalToConstant: 50)
+            openCameraButton.heightAnchor.constraint(equalToConstant: 50),
+            readTextInImageButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 30),
+            readTextInImageButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            readTextInImageButton.widthAnchor.constraint(equalToConstant: 200),
+            readTextInImageButton.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
+    
+    // MARK: - 텍스트 인식
+    
+    @objc private func readTextProcess() {
+        // 이미지 뷰에 이미지가 있는지 확인
+        guard let uiImage = imageView.image else {
+            openCameraProcess()
+            return
+        }
+        
+        guard let cgImage = uiImage.cgImage else {
+            openCameraProcess()
+            return
+        }
+        
+        openSheetWithText("This Text")
+    }
+    
+    private func openSheetWithText(_ text: String) {
+        let vc = TextViewController(text: text)
+        if let sheet = vc.sheetPresentationController {
+            sheet.detents = [.medium(), .large()]
+            sheet.prefersGrabberVisible = true
+        }
+        present(vc, animated: true, completion: nil)
+    }
+    
+//    fileprivate func recognizeText(image: UIImage?){
+//            guard let cgImage = image?.cgImage else {
+//                fatalError("could not get image")
+//            }
+//            
+//            let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+//            let request = VNRecognizeTextRequest{ [weak self]request, error in
+//                
+//                guard let observations = request.results as? [VNRecognizedTextObservation],
+//                      error == nil else{
+//                    return
+//                }
+//                
+//                let text = observations.compactMap({
+//                    $0.topCandidates(1).first?.string
+//                }).joined(separator: "\n")
+//
+//                DispatchQueue.main.async {
+//                    self?.label.text = text
+//                }
+//            }
+//       
+//            if #available(iOS 16.0, *) {
+//                let revision3 = VNRecognizeTextRequestRevision3
+//                request.revision = revision3
+//                request.recognitionLevel = .accurate
+//                request.recognitionLanguages =  [commonVisionLang]
+//                request.usesLanguageCorrection = true
+//
+//                do {
+//                    var possibleLanguages: Array<String> = []
+//                    possibleLanguages = try request.supportedRecognitionLanguages()
+//                    print(possibleLanguages)
+//                } catch {
+//                    print("Error getting the supported languages.")
+//                }
+//            } else {
+//                // Fallback on earlier versions
+//                request.recognitionLanguages =  ["en-US"]
+//                request.usesLanguageCorrection = true
+//            }
+//        
+//            do{
+//                try handler.perform([request])
+//            } catch {
+//                label.text = "\(error)"
+//                print(error)
+//            }
+//        }
+//    }
+    
+    // MARK: - 카메라 열기
     
     private func userAllowCamera() -> Bool {
         return AVCaptureDevice.authorizationStatus(for: .video) == .authorized
@@ -58,8 +166,6 @@ class ViewController: UIViewController {
         let vc = UIImagePickerController()
         vc.sourceType = .camera
         vc.delegate = self
-        vc.allowsEditing = true
-        vc.cameraFlashMode = .on
         present(vc, animated: true, completion: nil)
     }
     
@@ -74,6 +180,13 @@ class ViewController: UIViewController {
     }}
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            picker.dismiss(animated: true)
+            return
+        }
+        self.imageView.image = image
+        picker.dismiss(animated: true, completion: nil)
+    }
 }
 
