@@ -115,3 +115,9 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 ## SearchBar
 - [SearchViewController 설정](./SpotifyClone/SpotifyClone/Controllers/Core/SearchViewController.swift)
 - [SearchViewController 델리게이트 설정](./SpotifyClone/SpotifyClone/Controllers/Other/SearchResultsViewController.swift)
+
+## Settings
+- [아이폰 설정으로 보내기](./CameraApp/CameraApp/ViewController.swift)
+
+## Camera
+- [카메라 권한 받고 열기](./CameraApp/CameraApp/ViewController.swift)
