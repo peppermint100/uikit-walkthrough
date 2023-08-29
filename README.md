@@ -41,6 +41,8 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 
 ## SeachBar
 - [서치바 기본 설정](./inflearn-allen-course/MusicApp%20Updated%20Version/MusicApp/Controllers/ViewController.swift)
+- [SearchViewController 설정](./SpotifyClone/SpotifyClone/Controllers/Core/SearchViewController.swift)
+- [SearchViewController 델리게이트 설정](./SpotifyClone/SpotifyClone/Controllers/Other/SearchResultsViewController.swift)
 
 ## NotificationCenter
 - [NotificationCenter 등록 및 등록해제](./inflearn-allen-course/MemberList/MemberList/Views/DetailView.swift)
@@ -111,10 +113,6 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 ## Custom Datasource
 - [커스텀 데이터소스 설정](./SpotifyClone/SpotifyClone/Presenter/PlaybacakPresenter.swift)
 - [커스텀 데이터소스 뷰컨트롤러에서 사용](./SpotifyClone/SpotifyClone/Controllers/Other/PlayerViewController.swift)
-
-## SearchBar
-- [SearchViewController 설정](./SpotifyClone/SpotifyClone/Controllers/Core/SearchViewController.swift)
-- [SearchViewController 델리게이트 설정](./SpotifyClone/SpotifyClone/Controllers/Other/SearchResultsViewController.swift)
 
 ## Settings
 - [아이폰 설정으로 보내기](./CameraApp/CameraApp/ViewController.swift)
