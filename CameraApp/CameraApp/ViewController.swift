@@ -12,6 +12,8 @@ import VisionKit
 
 class ViewController: UIViewController {
     
+    var a: String?
+    
     private let imageView: UIImageView = {
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
@@ -43,6 +45,7 @@ class ViewController: UIViewController {
         openCameraButton.addTarget(self, action: #selector(openCameraProcess), for: .touchUpInside)
         readTextInImageButton.addTarget(self, action: #selector(readTextProcess), for: .touchUpInside)
         setupConstraints()
+        print(a!)
     }
     
     private func setupConstraints() {

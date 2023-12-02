@@ -1,0 +1,26 @@
+{
+  "configurations" : [
+    {
+      "id" : "7B7B6605-50A8-43CB-BE62-524745A87555",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "locationScenario" : {
+      "identifier" : "..\/..\/Route.gpx"
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:mapkit-corelocation.xcodeproj",
+      "identifier" : "BAA838EC2B1A1D9A00F61A16",
+      "name" : "mapkit-corelocation"
+    }
+  },
+  "testTargets" : [
+
+  ],
+  "version" : 1
+}
