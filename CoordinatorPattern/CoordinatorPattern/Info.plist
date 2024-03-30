@@ -19,11 +19,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>위치 사용중 가져간다</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>위치 전부 그리고 사용중 가져간다</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>위치 매번 가져간다</string>
 </dict>
 </plist>
