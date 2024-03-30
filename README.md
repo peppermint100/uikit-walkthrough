@@ -83,7 +83,7 @@ UIKit에 관하여 공부한 내용을 정리합니다.
 - [URLSession으로 API 비동기 호출하기](./inflearn-allen-course/MusicApp%20Updated%20Version/MusicApp/Networking/NetworkManager.swift)
 - [URLSession으로 API 비동기 호출하기2](./Netflix-clone/Netflix%20Clone/Managers/APICaller.swift)
 - [API에서 불러온 파라미터 이름 스위프트에 맞게 바꾸기 Codingkey](./inflearn-allen-course/MusicApp/MusicApp/Models/Music.swift)
-- [HTTP Method, HTTP Body 세팅](./SpotifyClone/SpotifyClone/Managers/AuthManager.swift`)
+- [HTTP Method, HTTP Body 세팅](./SpotifyClone/SpotifyClone/Managers/AuthManager.swift)
 - [여러 API 모두 불러왔는지 group을 통한 확인](./SpotifyClone/SpotifyClone/Controllers/Core/HomeViewController.swift)
 
 ## Alert
