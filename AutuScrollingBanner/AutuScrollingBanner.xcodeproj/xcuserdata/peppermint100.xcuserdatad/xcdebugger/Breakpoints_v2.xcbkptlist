@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "07CD65DD-2745-4AE6-A717-3DB49B14F7A4"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47D29656-25D1-443B-BF1A-5DF37D41749B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutuScrollingBanner/ViewModel/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "ViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "47D29656-25D1-443B-BF1A-5DF37D41749B - 42265532062c7c94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutuScrollingBanner.ViewModel.deinit"
+                  moduleName = "AutuScrollingBanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/peppermint100/ios/workspace/uikit-walkthrough/AutuScrollingBanner/AutuScrollingBanner/ViewModel/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "47D29656-25D1-443B-BF1A-5DF37D41749B - dcc265f9b671171"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutuScrollingBanner.ViewModel.__deallocating_deinit"
+                  moduleName = "AutuScrollingBanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/peppermint100/ios/workspace/uikit-walkthrough/AutuScrollingBanner/AutuScrollingBanner/ViewModel/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "47D29656-25D1-443B-BF1A-5DF37D41749B - 9f3fab198ca9426c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutuScrollingBanner.ViewModel.__allocating_init() -&gt; AutuScrollingBanner.ViewModel"
+                  moduleName = "AutuScrollingBanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/peppermint100/ios/workspace/uikit-walkthrough/AutuScrollingBanner/AutuScrollingBanner/ViewModel/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "47D29656-25D1-443B-BF1A-5DF37D41749B - 89a1de7ddfb12129"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutuScrollingBanner.ViewModel.init() -&gt; AutuScrollingBanner.ViewModel"
+                  moduleName = "AutuScrollingBanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/peppermint100/ios/workspace/uikit-walkthrough/AutuScrollingBanner/AutuScrollingBanner/ViewModel/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "3FC18BF0-F30C-4798-B3C2-6EECEDBF5CB8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = ""
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D259EE6F-3444-4E39-8B40-E11284BD110A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutuScrollingBanner/View/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "scrollViewDidEndDecelerating(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16A32A75-6583-48AC-ADD3-0D81D5DA0979"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutuScrollingBanner/View/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "scrollViewDidEndDecelerating(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
